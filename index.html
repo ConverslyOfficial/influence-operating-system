@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <title>Influence Operating System | Conversly</title>
+    <meta name="description" content="Discover your Influence Operating System score. A free diagnostic that maps your communication architecture across signal clarity, response time, social protocol, and impact—then shows you exactly what to upgrade.">
+    <link rel="icon" type="image/png" href="https://image2url.com/r2/default/images/1775753086637-dd19f16a-66d1-4545-a1c6-cb72a44cf442.png">
+    <meta property="og:title" content="Influence Operating System | Conversly">
+    <meta property="og:description" content="Map your influence architecture and discover which communication components need upgrades.">
+    <meta property="og:image" content="https://image2url.com/r2/default/images/1775752278024-8616a4ce-8371-4d88-bb5f-b40d6db1c6a1.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Influence Operating System | Conversly">
+    <meta name="twitter:description" content="Map your influence architecture and discover which communication components need upgrades.">
+    <meta name="twitter:image" content="https://image2url.com/r2/default/images/1775752278024-8616a4ce-8371-4d88-bb5f-b40d6db1c6a1.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -61,14 +71,18 @@
 
         .glass-pill{background:linear-gradient(135deg,var(--glass-5) 0%,var(--glass-3) 100%);border:1px solid var(--border-3);border-radius:100px;backdrop-filter:blur(var(--blur-lg));-webkit-backdrop-filter:blur(var(--blur-lg));box-shadow:0 1px 0 0 var(--shine-2) inset,0 10px 25px -10px rgba(0,0,0,0.45)}
 
-        .app{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:16px;min-height:100dvh;display:flex;flex-direction:column}
+        .app{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:12px;min-height:100dvh;display:flex;flex-direction:column}
+        @media(max-height:750px){.app{padding:8px}}
+        @media(max-height:680px){.app{padding:6px}}
 
         /* Topbar */
-        .topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;margin-bottom:20px}
+        .topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;margin-bottom:12px}
+        @media(max-height:750px){.topbar{padding:10px 16px;margin-bottom:8px}}
+        @media(max-height:680px){.topbar{padding:8px 14px;margin-bottom:6px}}
         .topbar-brand{font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-25)}
         .topbar-brand b{background:linear-gradient(135deg,var(--cyan-400),var(--cyan-300));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800}
-        .topbar-xp{display:none;align-items:center;gap:12px;padding:10px 18px;background:linear-gradient(135deg,var(--glass-cyan-2),var(--glass-3));border:1px solid var(--border-cyan);border-radius:14px}
-        .topbar-xp-icon{font-size:14px}
+        .topbar-xp{display:none;align-items:center;gap:10px;padding:10px 18px;background:linear-gradient(135deg,var(--glass-cyan-2),var(--glass-3));border:1px solid var(--border-cyan);border-radius:14px}
+        .topbar-xp-icon{display:flex;align-items:center;justify-content:center}
         .topbar-xp-text{font-size:12px;font-weight:700;font-family:var(--mono);color:var(--cyan-400)}
 
         .screen{display:none;flex-direction:column;flex:1}
@@ -76,36 +90,65 @@
         @keyframes screenIn{from{opacity:0;transform:translateY(24px) scale(0.97)}to{opacity:1;transform:translateY(0) scale(1)}}
 
         /* Intro */
-        .intro{flex:1;display:flex;flex-direction:column;justify-content:center;padding:10px 0 30px}
-        .intro-badge{display:inline-flex;align-items:center;gap:12px;padding:14px 20px;margin-bottom:32px;width:fit-content}
-        .intro-badge-icon{width:18px;height:18px;color:var(--cyan-400)}
-        .intro-badge span{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;font-family:var(--mono);color:var(--cyan-400)}
-        .intro-title{font-size:clamp(36px,9vw,50px);font-weight:800;line-height:1.05;letter-spacing:-0.04em;margin-bottom:8px}
+        .intro{flex:1;display:flex;flex-direction:column;justify-content:center;padding:4px 0 16px}
+        @media(max-height:750px){.intro{padding:2px 0 10px}}
+        @media(max-height:680px){.intro{padding:0}}
+        .intro-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;margin-bottom:20px;width:fit-content}
+        @media(max-height:750px){.intro-badge{padding:8px 14px;margin-bottom:14px}}
+        @media(max-height:680px){.intro-badge{padding:6px 12px;margin-bottom:10px}}
+        .intro-badge-icon{width:16px;height:16px;color:var(--cyan-400)}
+        .intro-badge span{font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;font-family:var(--mono);color:var(--cyan-400)}
+        .intro-title{font-size:clamp(32px,8vw,46px);font-weight:800;line-height:1.05;letter-spacing:-0.04em;margin-bottom:6px}
+        @media(max-height:750px){.intro-title{font-size:clamp(28px,7vw,40px);margin-bottom:4px}}
+        @media(max-height:680px){.intro-title{font-size:clamp(26px,6.5vw,36px);margin-bottom:2px}}
         .intro-title .line{display:block;text-shadow:0 0 120px rgba(255,255,255,0.05)}
         .intro-title .gradient{background:linear-gradient(135deg,var(--cyan-300) 0%,var(--cyan-400) 30%,var(--platinum) 60%,var(--cyan-300) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:300% 100%;animation:shimmer 12s ease-in-out infinite;filter:drop-shadow(0 0 50px var(--electric-glow))}
         @keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-        .intro-version{font-size:11px;font-family:var(--mono);color:var(--cyan-500);font-weight:600;letter-spacing:0.05em;margin-bottom:24px;opacity:0.8}
-        .intro-desc{font-size:15px;color:var(--text-50);line-height:1.7;margin-bottom:36px;max-width:380px}
+        .intro-version{font-size:10px;font-family:var(--mono);color:var(--cyan-500);font-weight:600;letter-spacing:0.05em;margin-bottom:16px;opacity:0.8}
+        @media(max-height:750px){.intro-version{font-size:9px;margin-bottom:12px}}
+        @media(max-height:680px){.intro-version{font-size:8px;margin-bottom:8px}}
+        .intro-desc{font-size:14px;color:var(--text-50);line-height:1.6;margin-bottom:24px;max-width:380px}
+        @media(max-height:750px){.intro-desc{font-size:13px;line-height:1.5;margin-bottom:16px}}
+        @media(max-height:680px){.intro-desc{font-size:12px;line-height:1.45;margin-bottom:12px}}
 
         /* System Specs Preview */
-        .system-preview{margin-bottom:36px}
-        .system-preview-label{font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-20);margin-bottom:16px;font-family:var(--mono)}
-        .system-specs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-        .spec-item{padding:16px;background:var(--glass-2);border:1px solid var(--border-2);border-radius:16px;display:flex;align-items:center;gap:14px}
-        .spec-icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--glass-cyan-2),var(--glass-3));border:1px solid var(--border-cyan);border-radius:12px}
-        .spec-icon svg{width:18px;height:18px;color:var(--cyan-400)}
+        .system-preview{margin-bottom:20px}
+        @media(max-height:750px){.system-preview{margin-bottom:14px}}
+        @media(max-height:680px){.system-preview{margin-bottom:10px}}
+        .system-preview-label{font-size:8px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-20);margin-bottom:12px;font-family:var(--mono)}
+        @media(max-height:750px){.system-preview-label{margin-bottom:10px}}
+        @media(max-height:680px){.system-preview-label{margin-bottom:8px}}
+        .system-specs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+        @media(max-height:680px){.system-specs{gap:6px}}
+        .spec-item{padding:12px;background:var(--glass-2);border:1px solid var(--border-2);border-radius:14px;display:flex;align-items:center;gap:12px}
+        @media(max-height:750px){.spec-item{padding:10px;gap:10px}}
+        @media(max-height:680px){.spec-item{padding:8px;gap:8px;border-radius:12px}}
+        .spec-icon{width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--glass-cyan-2),var(--glass-3));border:1px solid var(--border-cyan);border-radius:10px}
+        @media(max-height:750px){.spec-icon{width:32px;height:32px;border-radius:8px}}
+        @media(max-height:680px){.spec-icon{width:28px;height:28px;border-radius:6px}}
+        .spec-icon svg{width:16px;height:16px;color:var(--cyan-400)}
+        @media(max-height:680px){.spec-icon svg{width:14px;height:14px}}
         .spec-text{flex:1}
-        .spec-name{font-size:10px;color:var(--text-40);font-weight:600;letter-spacing:0.03em;margin-bottom:2px}
-        .spec-value{font-size:13px;font-weight:700;color:var(--text-80);font-family:var(--mono)}
+        .spec-name{font-size:9px;color:var(--text-40);font-weight:600;letter-spacing:0.03em;margin-bottom:1px}
+        @media(max-height:680px){.spec-name{font-size:8px}}
+        .spec-value{font-size:12px;font-weight:700;color:var(--text-80);font-family:var(--mono)}
+        @media(max-height:680px){.spec-value{font-size:11px}}
 
         /* Stats Highlight */
-        .stats-highlight{padding:20px;margin-bottom:36px;text-align:center}
-        .stats-highlight-row{display:flex;justify-content:space-around;gap:16px}
+        .stats-highlight{padding:16px;margin-bottom:20px;text-align:center}
+        @media(max-height:750px){.stats-highlight{padding:12px;margin-bottom:14px}}
+        @media(max-height:680px){.stats-highlight{padding:10px;margin-bottom:10px}}
+        .stats-highlight-row{display:flex;justify-content:space-around;gap:12px}
         .stat-block{flex:1}
-        .stat-block-num{font-size:32px;font-weight:800;background:linear-gradient(135deg,var(--cyan-400),var(--cyan-300));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin-bottom:6px;font-family:var(--mono)}
-        .stat-block-label{font-size:9px;color:var(--text-40);font-weight:600;letter-spacing:0.05em;line-height:1.4}
+        .stat-block-num{font-size:28px;font-weight:800;background:linear-gradient(135deg,var(--cyan-400),var(--cyan-300));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin-bottom:4px;font-family:var(--mono)}
+        @media(max-height:750px){.stat-block-num{font-size:26px}}
+        @media(max-height:680px){.stat-block-num{font-size:24px}}
+        .stat-block-label{font-size:8px;color:var(--text-40);font-weight:600;letter-spacing:0.05em;line-height:1.3}
+        @media(max-height:680px){.stat-block-label{font-size:7px}}
 
-        .btn{display:flex;align-items:center;justify-content:center;gap:12px;padding:18px 32px;border:none;border-radius:18px;font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;transition:all 0.5s var(--ease);position:relative;overflow:hidden;letter-spacing:0.02em}
+        .btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border:none;border-radius:16px;font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;transition:all 0.5s var(--ease);position:relative;overflow:hidden;letter-spacing:0.02em}
+        @media(max-height:750px){.btn{padding:14px 24px;font-size:13px;border-radius:14px}}
+        @media(max-height:680px){.btn{padding:12px 22px;font-size:12px;border-radius:12px}}
         .btn::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,0.15) 0%,transparent 50%);pointer-events:none}
         .btn::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,0.12) 100%);pointer-events:none}
         .btn-primary{background:linear-gradient(135deg,var(--cyan-500) 0%,#0099cc 100%);color:var(--navy-950);box-shadow:0 1px 0 0 rgba(255,255,255,0.25) inset,0 -1px 0 0 rgba(0,0,0,0.2) inset,0 15px 40px -12px var(--electric-glow),0 0 0 1px rgba(0,212,255,0.3)}
@@ -114,8 +157,11 @@
         .btn svg{width:18px;height:18px}
 
         /* Game Screen */
-        .game-header{margin-bottom:24px}
-        .progress-section{margin-bottom:20px}
+        .game-header{margin-bottom:16px}
+        @media(max-height:750px){.game-header{margin-bottom:12px}}
+        @media(max-height:680px){.game-header{margin-bottom:10px}}
+        .progress-section{margin-bottom:14px}
+        @media(max-height:680px){.progress-section{margin-bottom:10px}}
         .progress-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
         .progress-label{font-size:10px;font-weight:600;color:var(--text-35);letter-spacing:0.08em;font-family:var(--mono)}
         .progress-xp{font-size:12px;font-weight:700;color:var(--cyan-400);font-family:var(--mono)}
@@ -124,53 +170,92 @@
         .progress-fill::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);width:8px;height:8px;background:var(--cyan-300);border-radius:50%;box-shadow:0 0 15px var(--cyan-400),0 0 30px var(--cyan-500)}
 
         .module-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;background:linear-gradient(135deg,var(--glass-cyan-2),var(--glass-3));border:1px solid var(--border-cyan);border-radius:10px}
-        .module-badge-icon{font-size:14px}
+        .module-badge-icon{width:18px;height:18px;display:flex;align-items:center;justify-content:center}
+        .module-badge-icon svg{width:14px;height:14px;color:var(--cyan-400)}
         .module-badge-text{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--cyan-400);font-family:var(--mono)}
         .module-badge-num{font-size:10px;font-weight:600;color:var(--text-40);margin-left:4px}
 
-        .scenario-card{padding:32px 28px;margin-bottom:20px}
-        .scenario-context{font-size:10px;color:var(--cyan-500);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;font-family:var(--mono)}
-        .scenario-text{font-size:16px;line-height:1.65;color:var(--text-85);font-weight:500}
+        .scenario-card{padding:24px 22px;margin-bottom:14px}
+        @media(max-height:750px){.scenario-card{padding:20px 18px;margin-bottom:12px}}
+        @media(max-height:680px){.scenario-card{padding:16px 14px;margin-bottom:10px}}
+        .scenario-context{font-size:9px;color:var(--cyan-500);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;font-family:var(--mono)}
+        @media(max-height:680px){.scenario-context{font-size:8px;margin-bottom:8px}}
+        .scenario-text{font-size:15px;line-height:1.55;color:var(--text-85);font-weight:500}
+        @media(max-height:750px){.scenario-text{font-size:14px;line-height:1.5}}
+        @media(max-height:680px){.scenario-text{font-size:13px;line-height:1.45}}
         .scenario-text b{color:var(--text-100);font-weight:600}
 
-        .answers-wrap{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
-        .answer{display:flex;align-items:flex-start;gap:16px;padding:20px 18px;background:linear-gradient(140deg,var(--glass-3) 0%,var(--glass-2) 100%);border:1.5px solid var(--border-2);border-radius:18px;cursor:pointer;transition:all 0.35s var(--ease);text-align:left;font-family:var(--font)}
+        .answers-wrap{display:flex;flex-direction:column;gap:10px;margin-bottom:12px}
+        @media(max-height:750px){.answers-wrap{gap:8px;margin-bottom:10px}}
+        @media(max-height:680px){.answers-wrap{gap:6px;margin-bottom:8px}}
+        .answer{display:flex;align-items:flex-start;gap:12px;padding:14px 14px;background:linear-gradient(140deg,var(--glass-3) 0%,var(--glass-2) 100%);border:1.5px solid var(--border-2);border-radius:14px;cursor:pointer;transition:all 0.35s var(--ease);text-align:left;font-family:var(--font)}
+        @media(max-height:750px){.answer{padding:12px 12px;gap:10px;border-radius:12px}}
+        @media(max-height:680px){.answer{padding:10px 10px;gap:8px;border-radius:10px}}
         .answer:hover:not(.locked){background:linear-gradient(140deg,var(--glass-4) 0%,var(--glass-3) 100%);border-color:var(--border-3);transform:translateY(-3px);box-shadow:0 18px 40px -18px rgba(0,0,0,0.5)}
         .answer.selected{border-color:var(--cyan-400);background:linear-gradient(140deg,var(--glass-cyan-2) 0%,var(--glass-3) 100%);box-shadow:0 0 0 1px var(--glass-cyan-2) inset,0 18px 45px -18px var(--electric-glow)}
         .answer.locked{opacity:0.4;cursor:default;transform:none}
         .answer.locked.selected{opacity:1}
-        .answer-key{width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:var(--glass-4);border:1px solid var(--border-2);border-radius:10px;font-size:11px;font-weight:700;color:var(--text-40);flex-shrink:0;font-family:var(--mono);transition:all 0.3s}
+        .answer-key{width:28px;height:28px;display:flex;align-items:center;justify-content:center;background:var(--glass-4);border:1px solid var(--border-2);border-radius:8px;font-size:10px;font-weight:700;color:var(--text-40);flex-shrink:0;font-family:var(--mono);transition:all 0.3s}
+        @media(max-height:680px){.answer-key{width:24px;height:24px;font-size:9px;border-radius:6px}}
         .answer.selected .answer-key{background:linear-gradient(135deg,var(--cyan-500),var(--cyan-400));border-color:transparent;color:var(--navy-950)}
-        .answer-content{flex:1;display:flex;flex-direction:column;gap:8px}
-        .answer-text{font-size:13px;color:var(--text-70);line-height:1.55}
+        .answer-content{flex:1;display:flex;flex-direction:column;gap:6px}
+        @media(max-height:680px){.answer-content{gap:4px}}
+        .answer-text{font-size:12px;color:var(--text-70);line-height:1.45}
+        @media(max-height:680px){.answer-text{font-size:11px;line-height:1.4}}
         .answer-xp{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:var(--text-30);opacity:0;transition:opacity 0.3s;font-family:var(--mono)}
         .answer.reveal .answer-xp{opacity:1}
         .answer-xp.high{color:var(--cyan-400)}
         .answer-xp.mid{color:var(--amber-400)}
         .answer-xp.low{color:var(--text-40)}
 
+        /* Custom Answer Input */
+        .custom-answer{margin-top:8px}
+        .custom-answer-toggle{display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--glass-2);border:1px dashed var(--border-3);border-radius:12px;cursor:pointer;transition:all 0.3s;width:100%}
+        .custom-answer-toggle:hover{background:var(--glass-3);border-color:var(--border-4)}
+        .custom-answer-toggle svg{width:16px;height:16px;color:var(--text-40)}
+        .custom-answer-toggle span{font-size:12px;color:var(--text-40);font-weight:500}
+        .custom-answer-input{display:none;margin-top:8px}
+        .custom-answer-input.show{display:block}
+        .custom-answer-input textarea{width:100%;padding:14px;background:var(--glass-3);border:1px solid var(--border-3);border-radius:12px;color:var(--text-80);font-family:var(--font);font-size:13px;line-height:1.5;resize:none;min-height:80px;transition:all 0.3s}
+        .custom-answer-input textarea:focus{outline:none;border-color:var(--cyan-400);background:var(--glass-4)}
+        .custom-answer-input textarea::placeholder{color:var(--text-30)}
+        .custom-submit{margin-top:10px;padding:12px 20px;background:linear-gradient(135deg,var(--glass-cyan-2),var(--glass-3));border:1px solid var(--border-cyan);border-radius:10px;color:var(--cyan-400);font-size:12px;font-weight:600;cursor:pointer;transition:all 0.3s;width:100%}
+        .custom-submit:hover{background:var(--glass-cyan-3);border-color:var(--cyan-400)}
+
         /* Level Up Animation */
         .level-up{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(10,15,26,0.95);backdrop-filter:blur(20px);z-index:100;opacity:0;visibility:hidden;transition:all 0.4s var(--ease)}
         .level-up.show{opacity:1;visibility:visible}
         .level-up-content{text-align:center;animation:levelPop 0.6s var(--ease-spring)}
         @keyframes levelPop{from{transform:scale(0.8);opacity:0}to{transform:scale(1);opacity:1}}
-        .level-up-icon{font-size:56px;margin-bottom:20px;animation:float 2s ease-in-out infinite}
+        .level-up-icon{width:56px;height:56px;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;animation:float 2s ease-in-out infinite}
+        .level-up-icon svg{width:40px;height:40px;color:var(--cyan-400)}
         @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
         .level-up-title{font-size:24px;font-weight:800;background:linear-gradient(135deg,var(--cyan-300),var(--cyan-400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
         .level-up-sub{font-size:13px;color:var(--text-50);margin-bottom:24px}
         .level-up-xp{font-size:18px;font-weight:700;color:var(--cyan-400);font-family:var(--mono);margin-bottom:28px}
 
         /* Data Insight Interstitial */
-        .data-inter{display:none;flex-direction:column;padding:30px 0}
+        .data-inter{display:none;flex-direction:column;padding:16px 0;justify-content:center;flex:1}
+        @media(max-height:750px){.data-inter{padding:12px 0}}
+        @media(max-height:680px){.data-inter{padding:8px 0}}
         .data-inter.active{display:flex;animation:screenIn 0.6s var(--ease-out)}
-        .data-inter-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;margin-bottom:24px;width:fit-content;margin-left:auto;margin-right:auto}
-        .data-inter-badge svg{width:14px;height:14px;color:var(--cyan-400)}
-        .data-inter-badge span{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--cyan-400);font-family:var(--mono)}
-        .data-inter-stat{font-size:56px;font-weight:800;text-align:center;background:linear-gradient(135deg,var(--cyan-400),var(--cyan-300));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:16px;line-height:1;font-family:var(--mono)}
-        .data-inter-head{font-size:18px;font-weight:600;color:var(--text-90);text-align:center;margin-bottom:12px;line-height:1.4}
-        .data-inter-body{font-size:14px;color:var(--text-50);text-align:center;line-height:1.6;margin-bottom:32px;max-width:340px;margin-left:auto;margin-right:auto}
-        .data-chart{padding:24px;margin-bottom:32px}
-        .donut-chart{width:180px;height:180px;margin:0 auto 20px;position:relative}
+        .data-inter-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;margin-bottom:18px;width:fit-content;margin-left:auto;margin-right:auto}
+        @media(max-height:680px){.data-inter-badge{padding:6px 12px;margin-bottom:12px}}
+        .data-inter-badge svg{width:12px;height:12px;color:var(--cyan-400)}
+        .data-inter-badge span{font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--cyan-400);font-family:var(--mono)}
+        .data-inter-stat{font-size:48px;font-weight:800;text-align:center;background:linear-gradient(135deg,var(--cyan-400),var(--cyan-300));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px;line-height:1;font-family:var(--mono)}
+        @media(max-height:750px){.data-inter-stat{font-size:42px;margin-bottom:10px}}
+        @media(max-height:680px){.data-inter-stat{font-size:36px;margin-bottom:8px}}
+        .data-inter-head{font-size:16px;font-weight:600;color:var(--text-90);text-align:center;margin-bottom:10px;line-height:1.4}
+        @media(max-height:680px){.data-inter-head{font-size:14px;margin-bottom:8px}}
+        .data-inter-body{font-size:13px;color:var(--text-50);text-align:center;line-height:1.5;margin-bottom:24px;max-width:340px;margin-left:auto;margin-right:auto}
+        @media(max-height:750px){.data-inter-body{font-size:12px;margin-bottom:18px}}
+        @media(max-height:680px){.data-inter-body{font-size:11px;margin-bottom:14px}}
+        .data-chart{padding:18px;margin-bottom:24px}
+        @media(max-height:750px){.data-chart{padding:14px;margin-bottom:18px}}
+        @media(max-height:680px){.data-chart{padding:12px;margin-bottom:14px}}
+        .donut-chart{width:150px;height:150px;margin:0 auto 16px;position:relative}
+        @media(max-height:680px){.donut-chart{width:120px;height:120px;margin-bottom:12px}}
         .donut-chart svg{width:100%;height:100%;transform:rotate(-90deg)}
         .donut-bg{fill:none;stroke:var(--glass-4);stroke-width:20}
         .donut-fill{fill:none;stroke-width:20;stroke-linecap:round;stroke-dasharray:377;stroke-dashoffset:377;transition:stroke-dashoffset 1.5s var(--ease-out)}
@@ -185,22 +270,34 @@
         .legend-dot.gray{background:var(--text-30)}
 
         /* Results */
-        .results{padding:20px 0}
-        .results-head{text-align:center;margin-bottom:32px}
-        .os-version{font-size:11px;font-family:var(--mono);color:var(--cyan-500);letter-spacing:0.1em;margin-bottom:16px}
-        .os-score-wrap{position:relative;width:220px;height:220px;margin:0 auto 24px}
+        .results{padding:12px 0}
+        @media(max-height:750px){.results{padding:8px 0}}
+        .results-head{text-align:center;margin-bottom:24px}
+        @media(max-height:750px){.results-head{margin-bottom:18px}}
+        @media(max-height:680px){.results-head{margin-bottom:14px}}
+        .os-version{font-size:10px;font-family:var(--mono);color:var(--cyan-500);letter-spacing:0.1em;margin-bottom:12px}
+        @media(max-height:680px){.os-version{font-size:9px;margin-bottom:10px}}
+        .os-score-wrap{position:relative;width:180px;height:180px;margin:0 auto 18px}
+        @media(max-height:750px){.os-score-wrap{width:160px;height:160px;margin-bottom:14px}}
+        @media(max-height:680px){.os-score-wrap{width:140px;height:140px;margin-bottom:12px}}
         .os-ring{position:absolute;inset:0}
         .os-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
         .os-ring-bg{fill:none;stroke:var(--glass-4);stroke-width:10}
         .os-ring-fill{fill:none;stroke:url(#osGrad);stroke-width:10;stroke-linecap:round;stroke-dasharray:565;stroke-dashoffset:565;transition:stroke-dashoffset 2.5s var(--ease-out)}
         .os-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
-        .os-score{font-size:58px;font-weight:900;background:linear-gradient(135deg,var(--cyan-400),var(--cyan-300));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;font-family:var(--mono);letter-spacing:-0.02em}
-        .os-label{font-size:10px;color:var(--text-40);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;font-family:var(--mono)}
-        .os-tier{font-size:20px;font-weight:700;margin-bottom:8px;color:var(--cyan-400)}
-        .os-desc{font-size:14px;color:var(--text-50);max-width:320px;margin:0 auto;line-height:1.55}
+        .os-score{font-size:48px;font-weight:900;background:linear-gradient(135deg,var(--cyan-400),var(--cyan-300));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;font-family:var(--mono);letter-spacing:-0.02em}
+        @media(max-height:750px){.os-score{font-size:42px}}
+        @media(max-height:680px){.os-score{font-size:36px}}
+        .os-label{font-size:9px;color:var(--text-40);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-top:2px;font-family:var(--mono)}
+        .os-tier{font-size:18px;font-weight:700;margin-bottom:6px;color:var(--cyan-400)}
+        @media(max-height:680px){.os-tier{font-size:16px;margin-bottom:4px}}
+        .os-desc{font-size:13px;color:var(--text-50);max-width:320px;margin:0 auto;line-height:1.45}
+        @media(max-height:680px){.os-desc{font-size:12px}}
 
         /* Radar Chart */
-        .radar-section{padding:24px;margin-bottom:20px}
+        .radar-section{padding:18px;margin-bottom:16px}
+        @media(max-height:750px){.radar-section{padding:14px;margin-bottom:12px}}
+        @media(max-height:680px){.radar-section{padding:12px;margin-bottom:10px}}
         .radar-title{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-20);margin-bottom:20px;font-family:var(--mono);text-align:center}
         .radar-chart{width:200px;height:200px;margin:0 auto 20px;position:relative}
         .radar-chart svg{width:100%;height:100%}
@@ -223,12 +320,17 @@
         .insight-text{font-size:13px;color:var(--text-50);line-height:1.7}
 
         /* Pricing */
-        .pricing-section{padding:28px 0;margin-bottom:20px}
-        .pricing-header{text-align:center;margin-bottom:28px}
-        .pricing-title{font-size:22px;font-weight:700;background:linear-gradient(135deg,var(--text-100),var(--cyan-300));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
-        .pricing-sub{font-size:13px;color:var(--text-35);line-height:1.5}
-        .pricing-cards{display:flex;flex-direction:column;gap:18px}
-        .plan-card{padding:26px;position:relative;transition:all 0.4s var(--ease)}
+        .pricing-section{padding:20px 0;margin-bottom:16px}
+        @media(max-height:750px){.pricing-section{padding:16px 0;margin-bottom:12px}}
+        .pricing-header{text-align:center;margin-bottom:20px}
+        @media(max-height:680px){.pricing-header{margin-bottom:16px}}
+        .pricing-title{font-size:20px;font-weight:700;background:linear-gradient(135deg,var(--text-100),var(--cyan-300));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
+        @media(max-height:680px){.pricing-title{font-size:18px}}
+        .pricing-sub{font-size:12px;color:var(--text-35);line-height:1.4}
+        .pricing-cards{display:flex;flex-direction:column;gap:14px}
+        @media(max-height:680px){.pricing-cards{gap:12px}}
+        .plan-card{padding:20px;position:relative;transition:all 0.4s var(--ease)}
+        @media(max-height:680px){.plan-card{padding:16px}}
         .plan-card:hover{transform:translateY(-5px)}
         .plan-card.featured{border-color:var(--emerald-400);background:linear-gradient(160deg,rgba(16,185,129,0.1) 0%,var(--glass-2) 50%,var(--glass-3) 100%);margin-top:18px;overflow:visible}
         .plan-card.featured::before{background:linear-gradient(90deg,transparent,rgba(16,185,129,0.4),transparent)}
@@ -237,7 +339,7 @@
         .plan-name{font-size:18px;font-weight:700;color:var(--text-100);margin-bottom:4px}
         .plan-tagline{font-size:12px;color:var(--text-35);margin-bottom:18px}
         .plan-price{display:flex;align-items:baseline;gap:4px;margin-bottom:22px}
-        .plan-amount{font-size:38px;font-weight:800;background:linear-gradient(135deg,var(--text-100),var(--emerald-300));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-family:var(--mono)}
+        .plan-amount{font-size:38px;font-weight:800;color:var(--text-100);font-family:var(--mono)}
         .plan-period{font-size:13px;color:var(--text-35)}
         .plan-features{list-style:none;margin-bottom:26px}
         .plan-features li{display:flex;align-items:flex-start;gap:12px;font-size:12px;color:var(--text-50);line-height:1.5;margin-bottom:12px}
@@ -291,7 +393,7 @@
 
     <div class="level-up" id="levelUp">
         <div class="level-up-content">
-            <div class="level-up-icon" id="levelUpIcon">⚡</div>
+            <div class="level-up-icon" id="levelUpIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
             <div class="level-up-title" id="levelUpTitle">Module Complete</div>
             <div class="level-up-sub" id="levelUpSub">Signal Clarity mastered</div>
             <div class="level-up-xp" id="levelUpXp">+250 XP</div>
@@ -303,7 +405,7 @@
         <div class="topbar glass">
             <span class="topbar-brand">Powered by <b>Conversly</b></span>
             <div class="topbar-xp" id="topXp">
-                <span class="topbar-xp-icon">⚡</span>
+                <span class="topbar-xp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;color:var(--cyan-400)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
                 <span class="topbar-xp-text" id="topXpNum">0 XP</span>
             </div>
         </div>
@@ -389,9 +491,9 @@
                     </div>
                 </div>
                 <div class="module-badge">
-                    <span class="module-badge-icon" id="modIcon">📡</span>
+                    <span class="module-badge-icon" id="modIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
                     <span class="module-badge-text" id="modLabel">Signal Clarity</span>
-                    <span class="module-badge-num" id="modNum">1/4</span>
+                    <span class="module-badge-num" id="modNum">1/7</span>
                 </div>
             </div>
 
@@ -519,12 +621,13 @@
                     <div class="pricing-cards">
                         <div class="plan-card glass-card">
                             <div class="plan-name">Starter</div>
-                            <div class="plan-tagline">Begin your system upgrade</div>
+                            <div class="plan-tagline">Build the habit</div>
                             <div class="plan-price"><span class="plan-amount">$12.99</span><span class="plan-period">/ month</span></div>
                             <ul class="plan-features">
-                                <li>Unlimited AI training sessions</li>
-                                <li>Core component optimization</li>
-                                <li>Real-time performance feedback</li>
+                                <li>Core Features: Essential Analytics</li>
+                                <li>15-min AI voice + unlimited text roleplay</li>
+                                <li>Basic feedback on clarity & structure</li>
+                                <li>3 avatars + daily goals</li>
                             </ul>
                             <button class="plan-btn plan-btn-secondary" onclick="selectPlan('Starter')">
                                 Start Free Trial
@@ -537,13 +640,14 @@
                                 Most Popular
                             </div>
                             <div class="plan-name">Pro</div>
-                            <div class="plan-tagline">Full system optimization</div>
-                            <div class="plan-price"><span class="plan-amount">$24.99</span><span class="plan-period">/ month</span></div>
+                            <div class="plan-tagline">Your full communication gym</div>
+                            <div class="plan-price"><span class="plan-amount">$17.99</span><span class="plan-period">/ month</span></div>
                             <ul class="plan-features">
-                                <li>Everything in Starter</li>
-                                <li>Advanced component training</li>
-                                <li>Personalized upgrade roadmap</li>
-                                <li>Weekly system analytics</li>
+                                <li>Everything in Starter +</li>
+                                <li>30-min AI voice & all scenarios</li>
+                                <li>Live mid-conversation coaching + deep analytics</li>
+                                <li>10 premium avatars + multilingual</li>
+                                <li>Full history & reports</li>
                             </ul>
                             <button class="plan-btn plan-btn-primary" onclick="selectPlan('Pro')">
                                 Start Free Trial
@@ -572,7 +676,7 @@
         <div class="store-modal-title">Download Conversly</div>
         <div class="store-modal-plan" id="storeModalPlan">Pro Plan Selected</div>
         <div class="store-btns">
-            <a href="https://apps.apple.com/app/conversly" target="_blank" class="store-btn">
+            <a href="https://apps.apple.com/us/app/conversly-communication-gym/id6753739129" target="_blank" class="store-btn">
                 <div class="store-btn-icon">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                 </div>
@@ -582,7 +686,7 @@
                 </div>
                 <svg class="store-btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.conversly" target="_blank" class="store-btn">
+            <a href="https://play.google.com/store/apps/details?id=com.conversly.app" target="_blank" class="store-btn">
                 <div class="store-btn-icon">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83.67-1.5 1.5-1.5.4 0 .77.15 1.06.44L17.1 11.5c.59.54.59 1.46 0 2L5.56 22.56c-.29.29-.66.44-1.06.44-.83 0-1.5-.67-1.5-1.5zm14.1-8.5L5 2.5v19l12.1-9.5zM20 12l-3-2.5v5l3-2.5z"/></svg>
                 </div>
@@ -597,90 +701,151 @@
 
 <script>
 const modules = [
-    { id: 'signal', name: 'Signal Clarity', icon: '📡' },
-    { id: 'response', name: 'Response Time', icon: '⏱️' },
-    { id: 'social', name: 'Social Protocol', icon: '🤝' },
-    { id: 'impact', name: 'Impact Driver', icon: '⚡' }
+    { id: 'signal', name: 'Signal Clarity', icon: 'signal' },
+    { id: 'response', name: 'Response Time', icon: 'clock' },
+    { id: 'social', name: 'Social Protocol', icon: 'users' },
+    { id: 'impact', name: 'Impact Driver', icon: 'zap' }
 ];
 
+const moduleIcons = {
+    signal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
+    clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
+    users: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+    zap: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>'
+};
+
 const scenarios = [
-    // SIGNAL CLARITY (4 questions)
-    { mod: 'signal', context: 'CLARITY PROTOCOL', text: "You have 30 seconds to explain your project's value to a C-suite executive. <b>What's your approach?</b>", answers: [
-        { text: "One sentence: problem, solution, outcome. 'We're solving X by doing Y, which delivers Z.'", xp: 100 },
-        { text: "Start with key metrics and data that prove the value.", xp: 55 },
-        { text: "Give context about how the project started and evolved.", xp: 30 },
-        { text: "Adapt on the fly based on their questions and reactions.", xp: 50 }
+    // SIGNAL CLARITY (7 questions)
+    { mod: 'signal', context: 'CLARITY PROTOCOL', text: "You have 30 seconds to explain your biggest achievement to someone influential. <b>What's your approach?</b>", answers: [
+        { text: "One sentence: challenge, action, result. 'I tackled X by doing Y, which delivered Z.'", xp: 100 },
+        { text: "Start with the metrics and data that prove your impact.", xp: 55 },
+        { text: "Provide context about how the situation developed and your role in it.", xp: 35 },
+        { text: "Read their energy first and adapt your message accordingly.", xp: 50 }
     ]},
-    { mod: 'signal', context: 'MESSAGE ENCODING', text: "Your written update is being misunderstood by stakeholders. <b>How do you fix it?</b>", answers: [
+    { mod: 'signal', context: 'MESSAGE ENCODING', text: "Your written update keeps getting misinterpreted by teammates. <b>How do you fix it?</b>", answers: [
         { text: "Restructure: lead with the action needed, then the 'why', then supporting details.", xp: 100 },
-        { text: "Add more context and explanation to fill in the gaps.", xp: 35 },
+        { text: "Add more context and explanation to fill in the gaps.", xp: 40 },
         { text: "Schedule a quick call to walk through it verbally.", xp: 55 },
         { text: "Ask what's unclear and address those specific points.", xp: 60 }
     ]},
-    { mod: 'signal', context: 'NOISE REDUCTION', text: "You're in a meeting where multiple people are talking past each other. <b>What do you do?</b>", answers: [
-        { text: "Pause the conversation: 'Let me see if I understand — we're deciding X, and the options are A, B, C. Is that right?'", xp: 100 },
-        { text: "Let it play out and clarify your own position when there's an opening.", xp: 40 },
-        { text: "Send a follow-up email summarizing what you think was decided.", xp: 50 },
-        { text: "Speak louder and more assertively to cut through.", xp: 25 }
+    { mod: 'signal', context: 'NOISE REDUCTION', text: "You're in a group discussion where everyone is talking past each other. <b>What do you do?</b>", answers: [
+        { text: "Pause the conversation: 'Let me see if I understand — we're deciding X, and the options are A, B, C. Correct?'", xp: 100 },
+        { text: "Let it play out and clarify your own position when there's an opening.", xp: 45 },
+        { text: "Send a follow-up message summarizing what you think was decided.", xp: 50 },
+        { text: "Speak with more conviction to cut through the noise.", xp: 30 }
     ]},
-    { mod: 'signal', context: 'BANDWIDTH OPTIMIZATION', text: "You need to share complex information with a non-technical audience. <b>Your strategy?</b>", answers: [
-        { text: "Use one clear analogy, eliminate jargon, focus on 'what it means for you.'", xp: 100 },
-        { text: "Simplify the language but keep the key technical details.", xp: 50 },
-        { text: "Create visuals and diagrams to illustrate the concepts.", xp: 65 },
-        { text: "Check understanding frequently and adjust as needed.", xp: 55 }
+    { mod: 'signal', context: 'BANDWIDTH OPTIMIZATION', text: "You need to explain something technical to someone with zero background. <b>Your strategy?</b>", answers: [
+        { text: "Use one clear analogy, eliminate jargon, focus on 'what it means for them.'", xp: 100 },
+        { text: "Simplify the language but keep the essential technical details.", xp: 55 },
+        { text: "Create visuals and diagrams to illustrate the concepts.", xp: 60 },
+        { text: "Check understanding frequently and adjust based on their questions.", xp: 50 }
     ]},
-    // RESPONSE TIME (4 questions)
+    { mod: 'signal', context: 'PRECISION CALIBRATION', text: "Someone asks you a simple question but you sense they want more depth. <b>How do you respond?</b>", answers: [
+        { text: "Answer the surface question first, then offer: 'Would it help if I explained the reasoning behind this?'", xp: 100 },
+        { text: "Give the complete answer with full context upfront.", xp: 45 },
+        { text: "Ask clarifying questions to understand what level of detail they need.", xp: 65 },
+        { text: "Keep it brief — if they want more, they'll ask.", xp: 40 }
+    ]},
+    { mod: 'signal', context: 'FEEDBACK LOOP', text: "You notice someone nodding along but their eyes look confused. <b>What's your move?</b>", answers: [
+        { text: "Pause naturally: 'I want to make sure I'm being clear — does this track with what you're thinking?'", xp: 100 },
+        { text: "Slow down and repeat the key points with different words.", xp: 55 },
+        { text: "Keep going and check in at the end for questions.", xp: 35 },
+        { text: "Use a concrete example to ground what you're saying.", xp: 60 }
+    ]},
+    { mod: 'signal', context: 'CONTEXT SWITCHING', text: "You're presenting the same idea to both a detail-oriented analyst and a big-picture executive. <b>Your approach?</b>", answers: [
+        { text: "Lead with the outcome and impact, have the details ready as backup if asked.", xp: 100 },
+        { text: "Prepare two separate versions tailored to each audience.", xp: 55 },
+        { text: "Start with details that build up to the big picture naturally.", xp: 45 },
+        { text: "Focus on what they have in common and find a middle ground.", xp: 50 }
+    ]},
+    // RESPONSE TIME (7 questions)
     { mod: 'response', context: 'RAPID PROCESSING', text: "You're put on the spot with a question you don't have the answer to. <b>What's your response?</b>", answers: [
         { text: "'I don't have that specific data, but here's what I do know: [relevant context]. I'll confirm the details by [time].'", xp: 100 },
         { text: "Acknowledge you don't know and commit to following up.", xp: 60 },
-        { text: "Give your best estimate based on what you know.", xp: 40 },
-        { text: "Redirect to someone who might have the answer.", xp: 45 }
+        { text: "Give your best estimate based on what you know.", xp: 45 },
+        { text: "Redirect to someone who might have the answer.", xp: 50 }
     ]},
-    { mod: 'response', context: 'INTERRUPT HANDLING', text: "Someone cuts you off mid-thought in a high-stakes meeting. <b>How do you recover?</b>", answers: [
+    { mod: 'response', context: 'INTERRUPT HANDLING', text: "Someone cuts you off mid-thought in an important discussion. <b>How do you recover?</b>", answers: [
         { text: "Brief pause, then: 'Let me finish this point — [complete thought]. Now, what were you saying?'", xp: 100 },
         { text: "Let them finish, then circle back with 'Going back to what I was saying...'", xp: 55 },
-        { text: "Raise your hand slightly to signal you're not done.", xp: 50 },
-        { text: "Let it go and find another opportunity to make your point.", xp: 30 }
+        { text: "Use a hand gesture to signal you're not done speaking.", xp: 50 },
+        { text: "Let it go and find another opportunity to make your point.", xp: 35 }
     ]},
     { mod: 'response', context: 'PRESSURE CALIBRATION', text: "You receive harsh criticism of your work in front of others. <b>Your immediate response?</b>", answers: [
         { text: "Stay composed: 'Thank you for that feedback. Can you be more specific about [aspect]?' Then process later.", xp: 100 },
         { text: "Acknowledge it gracefully and move on to avoid escalation.", xp: 50 },
-        { text: "Defend your work with specific evidence.", xp: 35 },
+        { text: "Defend your work with specific evidence.", xp: 40 },
         { text: "Ask to discuss it privately after the meeting.", xp: 60 }
     ]},
     { mod: 'response', context: 'LATENCY REDUCTION', text: "A decision needs to be made now, but you don't have complete information. <b>What do you do?</b>", answers: [
         { text: "State your position clearly with caveats: 'Based on what we know, I recommend X. Here's why, and here's what could change that.'", xp: 100 },
-        { text: "Push for more time to gather additional data.", xp: 40 },
-        { text: "Go with your gut and commit fully.", xp: 50 },
-        { text: "Defer to whoever has the most context.", xp: 35 }
+        { text: "Push for more time to gather additional data.", xp: 45 },
+        { text: "Trust your instincts and commit fully.", xp: 50 },
+        { text: "Defer to whoever has the most context.", xp: 40 }
     ]},
-    // SOCIAL PROTOCOL (4 questions)
-    { mod: 'social', context: 'EMPATHY CALIBRATION', text: "A colleague is visibly frustrated after a difficult meeting. <b>How do you approach them?</b>", answers: [
-        { text: "Find a private moment: 'That meeting was rough. How are you doing with it?'", xp: 100 },
-        { text: "Give them space — they'll reach out if they want to talk.", xp: 45 },
-        { text: "Send a quick supportive message via Slack or email.", xp: 55 },
-        { text: "Acknowledge it briefly but keep things professional.", xp: 50 }
+    { mod: 'response', context: 'EMOTIONAL SPIKE', text: "Someone says something that genuinely frustrates you in a discussion. <b>How do you handle the next 5 seconds?</b>", answers: [
+        { text: "Take one breath, acknowledge the feeling internally, then respond to the content not the emotion.", xp: 100 },
+        { text: "Express your frustration diplomatically in the moment.", xp: 45 },
+        { text: "Stay silent until the feeling passes, then respond.", xp: 55 },
+        { text: "Redirect the conversation to something less charged.", xp: 50 }
     ]},
-    { mod: 'social', context: 'CONFLICT RESOLUTION', text: "Two team members are in a disagreement that's affecting productivity. <b>Your approach?</b>", answers: [
+    { mod: 'response', context: 'CURVEBALL HANDLING', text: "Your well-prepared presentation gets derailed by an unexpected question. <b>What's your move?</b>", answers: [
+        { text: "Acknowledge the question, give a brief answer, then: 'Let me show you how this connects to what I was covering.'", xp: 100 },
+        { text: "Fully address the question even if it takes the presentation off-track.", xp: 50 },
+        { text: "Ask if you can table it for the Q&A at the end.", xp: 55 },
+        { text: "Admit you weren't prepared for that and offer to follow up later.", xp: 45 }
+    ]},
+    { mod: 'response', context: 'SILENCE MANAGEMENT', text: "You ask a question and get met with awkward silence. <b>How do you respond?</b>", answers: [
+        { text: "Let the silence breathe for 3 more seconds, then rephrase or offer a starting point.", xp: 100 },
+        { text: "Fill the silence by answering your own question to get things moving.", xp: 45 },
+        { text: "Call on someone specific to break the ice.", xp: 55 },
+        { text: "Move on to the next topic to avoid discomfort.", xp: 40 }
+    ]},
+    // SOCIAL PROTOCOL (7 questions)
+    { mod: 'social', context: 'EMPATHY CALIBRATION', text: "A colleague seems off after a difficult interaction. <b>How do you approach them?</b>", answers: [
+        { text: "Find a private moment: 'That seemed rough. How are you doing with it?'", xp: 100 },
+        { text: "Give them space — they'll reach out if they want to talk.", xp: 50 },
+        { text: "Send a quick supportive message privately.", xp: 55 },
+        { text: "Acknowledge it briefly but keep things professional.", xp: 45 }
+    ]},
+    { mod: 'social', context: 'CONFLICT RESOLUTION', text: "Two people you work with are in a disagreement that's affecting everyone. <b>Your approach?</b>", answers: [
         { text: "Meet with each separately first to understand perspectives, then facilitate a structured conversation focused on shared goals.", xp: 100 },
-        { text: "Bring them together immediately to hash it out.", xp: 40 },
-        { text: "Escalate to their manager to handle.", xp: 30 },
-        { text: "Stay out of it — they're adults and should work it out.", xp: 35 }
+        { text: "Bring them together immediately to hash it out.", xp: 45 },
+        { text: "Escalate to someone with authority to handle.", xp: 35 },
+        { text: "Stay out of it — they're adults and should work it out.", xp: 40 }
     ]},
-    { mod: 'social', context: 'TRUST BUILDING', text: "You're new to a team that seems guarded around you. <b>How do you build rapport?</b>", answers: [
-        { text: "Find small opportunities to be helpful without being asked, listen more than you speak, and ask genuine questions about their work.", xp: 100 },
-        { text: "Suggest a team lunch or social event to break the ice.", xp: 55 },
-        { text: "Focus on delivering excellent work — trust will follow results.", xp: 50 },
-        { text: "Be patient — it takes time for any new person to be accepted.", xp: 45 }
+    { mod: 'social', context: 'TRUST BUILDING', text: "You're joining a group that seems closed off to newcomers. <b>How do you build rapport?</b>", answers: [
+        { text: "Find small opportunities to be helpful without being asked, listen more than you speak, ask genuine questions.", xp: 100 },
+        { text: "Suggest a casual hangout to break the ice.", xp: 55 },
+        { text: "Focus on delivering excellent results — trust will follow.", xp: 50 },
+        { text: "Be patient — acceptance takes time for everyone new.", xp: 45 }
     ]},
-    { mod: 'social', context: 'FEEDBACK DELIVERY', text: "You need to give difficult feedback to someone you like. <b>How do you handle it?</b>", answers: [
-        { text: "Be direct but caring: 'I'm sharing this because I want you to succeed. I've noticed [specific behavior] and the impact is [outcome]. How can I help?'", xp: 100 },
-        { text: "Soften it significantly to preserve the relationship.", xp: 35 },
-        { text: "Focus only on the positives and hope they improve naturally.", xp: 25 },
-        { text: "Wait for a formal review cycle to address it.", xp: 30 }
+    { mod: 'social', context: 'FEEDBACK DELIVERY', text: "You need to give difficult feedback to someone you care about. <b>How do you handle it?</b>", answers: [
+        { text: "Be direct but caring: 'I'm sharing this because I want you to succeed. I've noticed [specific behavior] and the impact is [outcome].'", xp: 100 },
+        { text: "Soften it significantly to preserve the relationship.", xp: 40 },
+        { text: "Focus mainly on the positives and hope they improve naturally.", xp: 30 },
+        { text: "Wait for a natural opportunity rather than forcing the conversation.", xp: 35 }
     ]},
-    // IMPACT DRIVER (4 questions)
-    { mod: 'impact', context: 'PERSUASION ENGINE', text: "You need to convince a skeptical stakeholder to approve your initiative. <b>Your strategy?</b>", answers: [
+    { mod: 'social', context: 'BOUNDARY SETTING', text: "Someone keeps asking you for favors that stretch you too thin. <b>What do you say?</b>", answers: [
+        { text: "'I want to help, but I can't take this on right now. Could we find another solution together?'", xp: 100 },
+        { text: "Say yes this time but plan to address it later.", xp: 35 },
+        { text: "Give a clear 'no' with no explanation needed.", xp: 55 },
+        { text: "Suggest someone else who might be able to help instead.", xp: 50 }
+    ]},
+    { mod: 'social', context: 'CREDIT ALLOCATION', text: "You did most of the work on a project but a peer is taking the spotlight. <b>How do you handle it?</b>", answers: [
+        { text: "In the moment, add value by saying 'Building on that — here's what the analysis showed...' to naturally include your contribution.", xp: 100 },
+        { text: "Let it go this time but document your contributions for the future.", xp: 50 },
+        { text: "Speak to them privately about sharing credit more fairly.", xp: 60 },
+        { text: "Raise it with your manager to ensure your work is recognized.", xp: 45 }
+    ]},
+    { mod: 'social', context: 'NETWORK ACTIVATION', text: "You want to reconnect with someone you haven't spoken to in a year. <b>Your opening?</b>", answers: [
+        { text: "Reference something specific you remember about them, share what made you think of them now, make a small offer of value.", xp: 100 },
+        { text: "Just reach out casually and see how they're doing.", xp: 55 },
+        { text: "Wait until you have a specific reason to contact them.", xp: 45 },
+        { text: "Like their recent posts first to warm up the connection.", xp: 50 }
+    ]},
+    // IMPACT DRIVER (7 questions)
+    { mod: 'impact', context: 'PERSUASION ENGINE', text: "You need to convince someone skeptical to support your idea. <b>Your strategy?</b>", answers: [
         { text: "Research their priorities first. Frame your proposal around their goals, not yours. Show how it solves their problem.", xp: 100 },
         { text: "Build the most compelling case with data and evidence.", xp: 55 },
         { text: "Get buy-in from others first to create social proof.", xp: 60 },
@@ -689,26 +854,47 @@ const scenarios = [
     { mod: 'impact', context: 'OBJECTION HANDLING', text: "Your proposal is met with 'We've tried this before and it didn't work.' <b>Your response?</b>", answers: [
         { text: "'What specifically didn't work last time? Let me show you what's different now and how we've addressed those issues.'", xp: 100 },
         { text: "Acknowledge their concern and pivot to the new evidence.", xp: 55 },
-        { text: "Respectfully disagree and present your counterarguments.", xp: 40 },
-        { text: "Ask what would need to be true for them to reconsider.", xp: 70 }
+        { text: "Respectfully disagree and present your counterarguments.", xp: 45 },
+        { text: "Ask what conditions would make them willing to reconsider.", xp: 65 }
     ]},
     { mod: 'impact', context: 'MOMENTUM GENERATION', text: "You have a great idea but no formal authority to implement it. <b>How do you drive it forward?</b>", answers: [
         { text: "Find one small proof-of-concept you can execute, show results, then use that momentum to build support.", xp: 100 },
-        { text: "Build a coalition of supporters before approaching leadership.", xp: 65 },
+        { text: "Build a coalition of supporters before approaching leadership.", xp: 60 },
         { text: "Write a compelling proposal and submit it through official channels.", xp: 50 },
-        { text: "Wait for the right moment when leadership is receptive.", xp: 30 }
+        { text: "Wait for the right moment when decision-makers are receptive.", xp: 35 }
     ]},
-    { mod: 'impact', context: 'LEGACY IMPRINT', text: "You want to be known as someone who drives meaningful change. <b>What's your focus?</b>", answers: [
+    { mod: 'impact', context: 'LEGACY IMPRINT', text: "You want to be known as someone who creates meaningful change. <b>What's your focus?</b>", answers: [
         { text: "Identify the highest-leverage problems, solve them visibly, and consistently share learnings with others.", xp: 100 },
-        { text: "Build deep expertise in one area and become the go-to person.", xp: 60 },
+        { text: "Build deep expertise in one area and become the go-to person.", xp: 55 },
         { text: "Say yes to high-profile opportunities that increase visibility.", xp: 45 },
         { text: "Focus on doing excellent work and trust that it will be recognized.", xp: 40 }
+    ]},
+    { mod: 'impact', context: 'STAKE RAISING', text: "You're in a negotiation and the other side seems disengaged. <b>How do you re-engage them?</b>", answers: [
+        { text: "Reframe the stakes: 'Here's what's at risk if we don't find alignment — and here's the upside if we do.'", xp: 100 },
+        { text: "Ask directly what's holding them back.", xp: 60 },
+        { text: "Sweeten the deal with an additional concession.", xp: 45 },
+        { text: "Give them time and space to come back when ready.", xp: 40 }
+    ]},
+    { mod: 'impact', context: 'NARRATIVE CONTROL', text: "A negative story is forming about your project that isn't accurate. <b>What do you do?</b>", answers: [
+        { text: "Proactively share the real story with key people before the narrative solidifies. Use facts and frame positively.", xp: 100 },
+        { text: "Address it directly in a group setting to set the record straight.", xp: 50 },
+        { text: "Focus on results — the work will speak for itself.", xp: 40 },
+        { text: "Identify the source and have a private conversation.", xp: 55 }
+    ]},
+    { mod: 'impact', context: 'VISIBILITY CALIBRATION', text: "Your contributions keep going unnoticed while less impactful work gets praised. <b>Your move?</b>", answers: [
+        { text: "Start sharing progress updates proactively, frame your work in terms of outcomes that matter to stakeholders.", xp: 100 },
+        { text: "Have a direct conversation with your manager about recognition.", xp: 60 },
+        { text: "Keep your head down — quality work eventually gets recognized.", xp: 40 },
+        { text: "Find an advocate who can speak to your contributions.", xp: 55 }
     ]}
 ];
 
 const dataInterstitials = [
-    { badge: "System Analytics", stat: "73%", head: "of professionals run on unoptimized systems.", body: "Those who systematically upgrade their communication see 340% faster career acceleration.", pct: 27 },
-    { badge: "Performance Data", stat: "4.2x", head: "ROI on influence system optimization.", body: "Every hour invested in communication training returns 4.2 hours in career acceleration.", pct: 81 }
+    { badge: "Research Insight", stat: "93%", head: "of first impressions are formed in under 7 seconds.", body: "Your signal clarity determines whether people tune in or tune out before you finish your first sentence.", pct: 93 },
+    { badge: "Performance Data", stat: "4.2x", head: "higher promotion rates for those who communicate under pressure.", body: "Response time isn't about speed—it's about composure. Leaders who stay calibrated in chaos advance faster.", pct: 81 },
+    { badge: "Social Intelligence", stat: "85%", head: "of career success comes from interpersonal skills.", body: "Technical skills get you hired. Social protocol determines how far you rise and how fast.", pct: 85 },
+    { badge: "Influence Research", stat: "73%", head: "of ideas fail not because they're bad, but because they're poorly communicated.", body: "Impact isn't about having the best idea—it's about making others believe in it.", pct: 27 },
+    { badge: "System Analytics", stat: "340%", head: "faster career acceleration for those who systematically upgrade communication.", body: "The data is clear: intentional practice compounds. Every hour invested returns multiples in opportunity.", pct: 78 }
 ];
 
 const tiers = [
@@ -728,6 +914,8 @@ const insights = {
 let currentQ = 0, currentMod = 0, totalXp = 0, locked = false, dataIdx = 0;
 let modScores = { signal: 0, response: 0, social: 0, impact: 0 };
 let modCounts = { signal: 0, response: 0, social: 0, impact: 0 };
+let shownDataPoints = [];
+let shownLevelUps = [];
 
 const $ = id => document.getElementById(id);
 
@@ -741,6 +929,8 @@ function startGame() {
     currentMod = 0;
     totalXp = 0;
     dataIdx = 0;
+    shownDataPoints = [];
+    shownLevelUps = [];
     modScores = { signal: 0, response: 0, social: 0, impact: 0 };
     modCounts = { signal: 0, response: 0, social: 0, impact: 0 };
     $('topXp').style.display = 'flex';
@@ -750,19 +940,27 @@ function startGame() {
 }
 
 function loadQuestion() {
+    // Level up every 7 questions (module completion)
+    // Map question numbers to module indices: Q7->mod0, Q14->mod1, Q21->mod2, Q28->mod3
+    const levelUpMap = { 7: 0, 14: 1, 21: 2, 28: 3 };
+    if (levelUpMap[currentQ] !== undefined && !shownLevelUps.includes(currentQ)) {
+        shownLevelUps.push(currentQ);
+        currentMod = levelUpMap[currentQ];
+        showLevelUp();
+        return;
+    }
+    
     if (currentQ >= scenarios.length) {
         showResults();
         return;
     }
     
-    // Level up every 4 questions
-    if (currentQ > 0 && currentQ % 4 === 0) {
-        showLevelUp();
-        return;
-    }
-    
-    // Data interstitial at Q8
-    if (currentQ === 8 && dataIdx < dataInterstitials.length) {
+    // Data interstitial at every 5th question (Q5, Q10, Q15, Q20, Q25)
+    // Each interstitial is tied to a specific question number
+    const dataPointMap = { 5: 0, 10: 1, 15: 2, 20: 3, 25: 4 };
+    if (dataPointMap[currentQ] !== undefined && !shownDataPoints.includes(currentQ)) {
+        shownDataPoints.push(currentQ);
+        dataIdx = dataPointMap[currentQ];
         showDataInter();
         return;
     }
@@ -770,15 +968,15 @@ function loadQuestion() {
     locked = false;
     const s = scenarios[currentQ];
     const mod = modules.find(m => m.id === s.mod);
-    const qInMod = (currentQ % 4) + 1;
+    const qInMod = (currentQ % 7) + 1;
     
     // Update progress
     const pct = Math.round((currentQ / scenarios.length) * 100);
     $('progressFill').style.width = pct + '%';
     $('progressXp').textContent = totalXp + ' XP';
-    $('modIcon').textContent = mod.icon;
+    $('modIcon').innerHTML = moduleIcons[mod.icon];
     $('modLabel').textContent = mod.name;
-    $('modNum').textContent = qInMod + '/4';
+    $('modNum').textContent = qInMod + '/7';
     
     $('scenarioContext').textContent = s.context;
     $('scenarioText').innerHTML = s.text;
@@ -802,6 +1000,21 @@ function loadQuestion() {
         btn.onclick = () => pick(btn, a);
         wrap.appendChild(btn);
     });
+    
+    // Add custom answer input
+    const customDiv = document.createElement('div');
+    customDiv.className = 'custom-answer';
+    customDiv.innerHTML = `
+        <button class="custom-answer-toggle" onclick="toggleCustomAnswer(this)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            <span>Write your own response</span>
+        </button>
+        <div class="custom-answer-input">
+            <textarea placeholder="Describe how you would handle this situation..." id="customText"></textarea>
+            <button class="custom-submit" onclick="submitCustomAnswer()">Submit Response</button>
+        </div>
+    `;
+    wrap.appendChild(customDiv);
 }
 
 function pick(btn, ans) {
@@ -829,13 +1042,49 @@ function showLevelUp() {
     const completedMod = modules[currentMod];
     const modXp = modScores[completedMod.id];
     
-    $('levelUpIcon').textContent = completedMod.icon;
+    $('levelUpIcon').innerHTML = moduleIcons[completedMod.icon];
     $('levelUpTitle').textContent = completedMod.name + ' Complete';
     $('levelUpSub').textContent = 'Module diagnostic finished';
     $('levelUpXp').textContent = '+' + modXp + ' XP earned';
     
     $('levelUp').classList.add('show');
-    currentMod++;
+}
+
+function toggleCustomAnswer(btn) {
+    const inputDiv = btn.nextElementSibling;
+    inputDiv.classList.toggle('show');
+    if (inputDiv.classList.contains('show')) {
+        inputDiv.querySelector('textarea').focus();
+    }
+}
+
+function submitCustomAnswer() {
+    if (locked) return;
+    const customText = $('customText').value.trim();
+    if (!customText) return;
+    
+    locked = true;
+    
+    // Award base XP for custom answer (50-70 range)
+    const customXp = Math.floor(Math.random() * 21) + 50;
+    const mod = scenarios[currentQ].mod;
+    modScores[mod] += customXp;
+    modCounts[mod]++;
+    totalXp += customXp;
+    
+    $('topXpNum').textContent = totalXp + ' XP';
+    $('progressXp').textContent = totalXp + ' XP';
+    
+    // Visual feedback
+    document.querySelectorAll('.answer').forEach(a => a.classList.add('locked'));
+    document.querySelector('.custom-submit').textContent = '+' + customXp + ' XP';
+    document.querySelector('.custom-submit').style.background = 'linear-gradient(135deg, var(--cyan-500), var(--cyan-400))';
+    document.querySelector('.custom-submit').style.color = 'var(--navy-950)';
+    
+    setTimeout(() => {
+        currentQ++;
+        loadQuestion();
+    }, 1200);
 }
 
 function closeLevelUp() {
@@ -859,8 +1108,6 @@ function showDataInter() {
         $('donutFill').style.strokeDashoffset = offset;
         animNum($('donutPct'), 0, data.pct, 1500, true);
     }, 400);
-    
-    dataIdx++;
 }
 
 function continueFromData() {
@@ -895,7 +1142,7 @@ function showResults() {
     // Module scores
     const modAvgs = {};
     modules.forEach(m => {
-        const avg = Math.round((modScores[m.id] / 400) * 100);
+        const avg = Math.round((modScores[m.id] / 700) * 100);
         modAvgs[m.id] = avg;
     });
     
@@ -952,12 +1199,63 @@ function animNum(el, start, end, dur, addPct = false) {
 
 function shareResults() {
     const r = window.gameResults;
-    const text = `My Influence OS Score: ${r.osScore} (${r.tier})\n\nTotal XP: ${r.totalXp}\n\nRun your system diagnostic:\n${location.href}`;
+    const shareUrl = window.location.href.split('?')[0];
+    const text = `I just ran my Influence OS Diagnostic and scored ${r.osScore} (${r.tier})!\n\nSignal Clarity: ${r.modAvgs.signal}%\nResponse Time: ${r.modAvgs.response}%\nSocial Protocol: ${r.modAvgs.social}%\nImpact Driver: ${r.modAvgs.impact}%\n\nRun your own diagnostic:`;
+    
     if (navigator.share) {
-        navigator.share({ title: 'My Influence Operating System', text, url: location.href }).catch(() => {});
+        navigator.share({ 
+            title: 'My Influence Operating System Score', 
+            text: text,
+            url: shareUrl 
+        }).catch((err) => {
+            if (err.name !== 'AbortError') {
+                fallbackShare(text, shareUrl);
+            }
+        });
     } else {
-        navigator.clipboard.writeText(text).then(() => alert('Copied!')).catch(() => alert(text));
+        fallbackShare(text, shareUrl);
     }
+}
+
+function fallbackShare(text, url) {
+    const fullText = text + '\n' + url;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(fullText).then(() => {
+            showCopiedToast();
+        }).catch(() => {
+            promptCopy(fullText);
+        });
+    } else {
+        promptCopy(fullText);
+    }
+}
+
+function showCopiedToast() {
+    const toast = document.createElement('div');
+    toast.style.cssText = 'position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:var(--cyan-500);color:var(--navy-950);padding:12px 24px;border-radius:12px;font-weight:600;font-size:14px;z-index:999;animation:screenIn 0.3s ease-out';
+    toast.textContent = 'Copied to clipboard!';
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 2000);
+}
+
+function promptCopy(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;max-width:300px;height:150px;z-index:1000;padding:12px;border-radius:8px;border:1px solid var(--border-3);background:var(--navy-800);color:var(--text-90);font-size:12px';
+    document.body.appendChild(textarea);
+    textarea.select();
+    textarea.setSelectionRange(0, 99999);
+    
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = 'Copy & Close';
+    closeBtn.style.cssText = 'position:fixed;top:calc(50% + 90px);left:50%;transform:translateX(-50%);z-index:1001;padding:10px 20px;background:var(--cyan-500);color:var(--navy-950);border:none;border-radius:8px;font-weight:600;cursor:pointer';
+    closeBtn.onclick = () => {
+        try { document.execCommand('copy'); } catch(e) {}
+        textarea.remove();
+        closeBtn.remove();
+        showCopiedToast();
+    };
+    document.body.appendChild(closeBtn);
 }
 
 function selectPlan(planName) {
